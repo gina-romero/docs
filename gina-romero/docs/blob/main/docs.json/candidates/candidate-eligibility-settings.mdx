@@ -1,0 +1,135 @@
+---
+title: "Candidate Eligibility Settings"
+---
+
+## Eligibility Rules
+
+_Set universal eligibility rules to keep your research data high quality and your participant pool reliable._
+
+### Overview
+
+**Eligibility Rules** allow Admins to apply global rules that determine who can be invited to studies within Great Question. These rules help you manage candidate participation, prevent over-recruitment, and maintain consistent research quality across your database.
+
+<Note>
+  **Only Admins** can edit eligibility settings.
+</Note>
+
+### Why use eligibility rules
+
+- Avoid repeatedly inviting the same or unresponsive participants.
+- Ensure participants meet consent and participation standards.
+- Improve show-up rates and reduce recruitment friction.
+- Maintain a healthy and compliant participant database.
+
+<Note>
+  **Note:** Eligibility rules apply universally across all studies and automatically update candidate eligibility in real-time.
+</Note>
+
+### Default Eligibility Rules
+
+Each Great Question account comes with five default eligibility rules. These default rules cover the most common participation management needs.
+
+<Note>
+  **Note**: You can only have six eligibility rules on the account.
+</Note>
+
+| **Rule** | **Purpose** | **Default Behavior** |
+| --- | --- | --- |
+| **Study invitation limit** | Prevents over-inviting participants by setting a limit on how many study invites they can receive in a rolling time window. | Candidates exceeding the limit will not receive new invites until the window resets. |
+| **Invite responsiveness** | Filters out participants who consistently ignore invites. | Blocks invites to candidates with low response rates. |
+| **Study participation limit** | Avoids overuse of the same candidates across multiple studies. | Restricts participation if candidates exceed a set participation threshold. |
+| **Interview no-show limit** | Reduces no-shows by excluding candidates with too many missed sessions. | Candidates flagged for past no-shows are prevented from new invites. |
+| **Candidate consent** | Respects opt-out preferences for privacy compliance. | Automatically excludes anyone who has opted out of research participation. |
+
+### How to find and edit eligibility rules
+
+1. Navigate to your **Account Settings.**
+2. Select **Governance →** [**Candidate Eligibility**](https://greatquestion.co/governance/eligibility) **.**
+3. Review the list of existing rules.
+4. To edit, click the **Edit (pencil)** icon next to the rule.
+5. Adjust criteria as needed, then click **Save.**
+
+### How to create a new eligibility rule
+
+<Note>
+  **Note**: Available for Enterprise plans only.
+</Note>
+
+You can create custom rules tailored to your company's research needs.
+
+#### To add a custom rule:
+
+1. Click **\+ Create rule** in the top-right corner.
+2. Enter a **Title** and **Description** that clearly explain the rule's purpose.
+3. Click **\+ Add criteria** to define the attributes the rule applies to.
+   - Criteria determine which candidates are marked as ineligible.
+4. Add a short **Label** that appears under the Eligibility column on the Candidates page.
+   - Example: `no-showed` or `unresponsive`.
+5. Review your details and click **Create.**
+
+You can have **up to 6 rules in total**, including both default and custom ones. To add more, delete an existing rule.
+
+### How to delete an eligibility rule
+
+1. Click the **Delete (trash can) icon** next to the rule.
+2. Review the warning message carefully.
+3. Click **Delete** to confirm or **Don't delete** to cancel.
+
+![](https://assets.usepylon.com/d2bb9040-877a-4257-aa65-b4cc6ef192a7%2F1760390069848-image.png?Expires=253370764800&Signature=sHpNMhIt~wflV8cuPVfNoT3VihRwWr6dhf3RF4pjxPZWhuOYuu3ZaVWeZ3mfetUmKxPJQ4KqNzf85RdGlEGHsOSsbXd5lAfgaYOkkivHNbmRxGvyW8O5~6KcWdcQwPU-AVq4PjLkfc6Clqj6RRHl6Q5Gtv2f8zuYKJQv~SoaArvvCP0i~VKeXd1uhBqhIJRjKs6iO7y0nQK9Ll9uhLK3YzZtIQmIn-e1yBVjcs7jxf~BrQ415mRi0SMIyswHJcEbR7IfDmV4IxG~TgGwXpvJEPXF1wfvE1vrEz64p9mW8FKxRz04y7U9ZjAYPX2diIQV2eB34rnNHQ-k4ip4~saCZA__&Key-Pair-Id=K3NV4LZ47N8M46)
+
+<Note>
+  **Note:** Deleting a rule cannot be undone, but you can recreate it manually if needed. Keep notes of any custom criteria before removal.
+</Note>
+
+### How to identify which rule affects a candidate
+
+#### On the global Candidate page:
+
+1. Go to the **Candidates** page and ensure the Eligible column is added.
+2. Hover over the **Eligibility** label next to a candidate.
+3. A tooltip will display which rule (and criteria) caused the restriction.
+4. **If a candidate is affected by a single rule, you'll see that rule's label next to their name.** **If a candidate is affected by multiple rules, you'll see the label** **_Ineligible_**. Hovering over this label shows which specific rules are applying.
+
+![](https://files.helpdocs.io/ksa1uqyvhs/articles/h2m2hped4v/1766176042406/image.png)
+
+This makes it easy to troubleshoot why certain participants are marked as ineligible.
+
+#### Within a study:
+
+1. Go to the **Participants** tab within the study, make sure the **Eligible** column is added, and confirm you're viewing the **Shortlisted** tab.
+2. Hover over the **Eligibility** label next to a candidate.
+3. A tooltip will display which rule (and criteria) caused the restriction.
+4. **If a candidate is affected by a single rule, you'll see that rule's label next to their name.** **If a candidate is affected by multiple rules, you'll see the label** **_Ineligible_**. Hovering over this label shows which specific rules are applying.
+
+![](https://files.helpdocs.io/ksa1uqyvhs/articles/h2m2hped4v/1766176354495/image.png)
+
+This makes it easy to troubleshoot why certain participants are marked as ineligible.
+
+#### What happens if no rules apply?
+
+If a candidate doesn't match any rule criteria, they are considered **eligible** to participate in new research studies.
+
+![](https://files.helpdocs.io/ksa1uqyvhs/articles/h2m2hped4v/1766176374964/image.png)
+
+### FAQ
+
+**Can default rules be deleted?** Yes, Admins can remove any rule, including defaults. However, it's recommended to keep the five defaults for best data hygiene.
+
+**How many custom rules can I create?** You can create custom rules up to a total of six (including default ones).
+
+**What happens when I make a change?** Changes apply immediately, and any participants exceeding the new limit will be marked with the respective label until their activity resets.
+
+### **Troubleshooting Eligibility Rules**
+
+| **Issue** | **What's Happening** | **How to Fix It** |
+| --- | --- | --- |
+| Candidates marked ineligible unexpectedly | A rule is applying criteria you may have forgotten or changed | Hover over the candidate's **Eligibility label** to see which rule triggered it; adjust rule settings if needed |
+| Eligibility changes not reflected in a study | Studies pull eligibility in real time; a page refresh may be needed | Refresh the study page; verify the rule settings under **Governance → Candidate Eligibility** |
+| Unable to edit or delete a rule | Only Admins can manage eligibility settings | Confirm your role with an Admin; have an Admin make updates |
+| Custom rule not applying to candidates | Criteria may not match candidate attributes or attribute fields may be incomplete | Review candidate data, confirm correct attribute mapping, and update rules accordingly |
+| Cannot create a new rule | You may have reached the 6-rule limit | Delete an existing rule or consolidate criteria into fewer rules |
+| A candidate appears eligible but shouldn't be | No rule currently covers the scenario | Add new criteria to an existing rule or create a custom rule (Enterprise only) |
+
+#### **Still need help?**
+
+Reach out to us anytime in the app or email us at [support@greatquestion.co](mailto:support@greatquestion.co)!

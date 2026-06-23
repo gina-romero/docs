@@ -107,6 +107,20 @@
           "getting-started/what-is-user-research",
           "getting-started/customer-support"
         ]
+      },
+      {
+        "group": "Candidates",
+        "icon": "users",
+        "pages": [
+          "candidates/overview",
+          "candidates/candidates-101",
+          "candidates/candidate-eligibility-settings",
+          "candidates/participant-segments",
+          "candidates/importing-candidates",
+          "candidates/exporting-candidates",
+          "candidates/using-url-parameters",
+          "candidates/participation-states"
+        ]
       }
     ]
   }

@@ -1,0 +1,100 @@
+---
+title: "Using URL Parameters"
+---
+
+_This article will walk you through how to use URL parameters in Great Question to prefill survey fields and candidate attributes._
+
+### Who this is for
+
+This guide is for:
+
+- **Admins** setting up surveys and attributes
+- **Creators** who want to save participants time when filling forms
+- Teams bulk-sending invitations from external platforms (e.g. email marketing tools)
+
+### What you'll learn
+
+By the end of this article, you'll know how to:
+
+- Prefill survey fields and candidate attributes using URL parameters
+- Construct URLs with custom attributes
+- Use hidden fields (e.g. referrer tracking) for better reporting
+
+### Prerequisites
+
+Make sure you have:
+
+- Access to **Candidate Attributes** in your account
+- A survey or screener set up in Great Question
+- Attributes mapped to the survey questions you want to prefill
+
+### Step-by-step Instructions
+
+1. Understand where URL parameters work
+
+- Supported for all studies when using **Invite via link**.
+- Not supported when candidates are invited directly via email (except for name and email).
+
+2. Supported parameters
+
+- **Name** and **Email** (always supported)
+- Any **custom attributes** you configure (e.g., plan, role, location)
+
+3. Map survey fields to custom attributes
+
+- Go to your **Survey editor**
+- At the bottom left of each form field, set the **mapped custom attribute**
+- Example: Map the question _"What payment plan are you on?"_ to a `plan` attribute
+
+4. Enable candidate attributes to be set via URL
+
+- Navigate to **Settings →** [**Custom Attributes**](https://greatquestion.co/custom_attrs/candidate)
+- Select the candidate attribute you want to populate
+- Click the **Pencil icon to edit**
+- Check **"Can be set via a url parameter"**
+- Click **Confirm**
+
+<iframe src="https://drive.google.com/file/d/190EjVsVeK_r3aA-K9P3mGlOaXSGvm_eV/preview" width="640" height="480" frameborder="0" allowfullscreen />
+
+5. Construct your study URL with parameters
+
+- Append parameters using standard query strings (URL encoding supported).
+- Example: [https://greatquestion.co/great/u2cmeUiP/form?plan=enterprise&name=PJ&email=support@greatquestion.co](https://greatquestion.co/great/u2cmeUiP/form?plan=enterprise&name=PJ&email=support@greatquestion.co)
+- This pre-fills the survey with:
+  - Name: PJ
+  - Email: [support@greatquestion.co](mailto:support@greatquestion.co)
+  - Plan: enterprise
+
+6. Use hidden referrer tracking
+
+- Add a `referrer` parameter to track where participants joined from.
+- Example: [https://greatquestion.co/workspace/some-study?referrer=facebook](https://greatquestion.co/workspace/some-study?referrer=facebook)
+- Alternatively, create your own attribute (e.g., `origin`) and apply the same way: [https://greatquestion.co/workspace/some-study?origin=facebook](https://greatquestion.co/workspace/some-study?origin=facebook)
+
+<Tip>
+  **Pro tips:**
+
+  - Use **bulk sending** via your marketing platform to include personalized parameters for each participant.
+  - Always test URLs in an incognito browser session before sharing widely.
+  - Keep parameter names simple and consistent (e.g., `plan`, `origin`).
+</Tip>
+
+### Troubleshooting URL Parameters
+
+| **Issue** | **What's Happening** | **How to Fix It** |
+| --- | --- | --- |
+| Prefilled data not showing in the survey | The attribute isn't enabled for URL population, or the field isn't mapped correctly. | Go to **Settings → Custom Attributes** → edit the attribute → ensure **"Can be set via a URL parameter"** is checked. Then confirm the survey question is **mapped** to that attribute. |
+| URL parameters not working at all | The link is malformed (missing `?` or `&` separators) or copied incorrectly. | Double-check URL formatting — parameters should follow `?` for the first value and use `&` for additional ones (e.g., `?name=Alex&plan=pro`). |
+| Custom attributes not populating | The attribute name in the URL doesn't match the system name exactly. | Verify the **attribute key** in **Settings → Custom Attributes** matches the one used in your URL (case-sensitive). |
+| Only name and email prefill, not other fields | Name and email are always supported, but other fields require mapping. | Go to your **survey editor** and make sure each form field is mapped to a **custom attribute**. |
+| URL parameters work in testing but not for invite links | Direct email invites strip query parameters for security reasons. | Use **Invite via link** or distribute via external email platform (e.g., HubSpot, Mailchimp). Prefill only works for **link-based invites**. |
+| Hidden tracking parameters (e.g., referrer/origin) not appearing in exports | Hidden attributes weren't created or mapped to candidate attributes. | Create a **custom attribute** (e.g., `origin`) and enable "Can be set via a URL parameter." Hidden parameters will then appear in candidate profiles or exports. |
+| Prefilled data disappears after submission | Candidate profile didn't exist prior to submission, and data wasn't stored. | Ensure your study is configured to **create new candidate records** when submitted via link. Check under **Study Settings → Recruitment.** |
+| Values not saving to the candidate profile | Attribute is not linked to candidate data (e.g., only tied to the survey field). | Revisit **survey field mapping** and confirm each question is mapped to a candidate attribute, not just a temporary form field. |
+| Spaces or special characters break the URL | Parameter values weren't URL-encoded. | Encode special characters (e.g., `+` for spaces, `%40` for `@`). Use online encoding tools to test your final URL. |
+| Prefilled fields showing incorrect data | Parameters reused from previous test links or cached data. | Open the link in **incognito mode** or clear cache before testing to avoid auto-filled or cached field data. |
+| Bulk email tool strips query parameters | Some tools automatically sanitize URLs for security. | Check your marketing platform's URL handling settings. Whitelist `greatquestion.co` if possible to preserve parameters. |
+
+#### **Still need help?**
+
+Reach out to us anytime in the app or email us at [support@greatquestion.co](mailto:support@greatquestion.co)!

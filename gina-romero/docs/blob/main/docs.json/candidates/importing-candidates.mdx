@@ -1,0 +1,97 @@
+---
+title: "Importing Candidates"
+---
+
+_Learn how to bulk upload candidates into your database or directly into a study using a CSV file._
+
+### Who This is For
+
+This guide is for:
+
+- **Admins and Creators** managing participant databases
+- **Researchers** recruiting participants for upcoming studies
+- **Ops teams** maintaining panel data accuracy
+
+### What You'll Learn
+
+By the end of this article, you'll know how to:
+
+- Prepare your data for import
+- Bulk upload candidates into Great Question
+- Map attributes and update existing profiles
+- Import candidates directly into a study
+
+### Before You Import
+
+To ensure your import runs smoothly, make sure your file meets the following requirements:
+
+- **File format** — Must be a CSV file (`.csv`).
+- **Headers** — Column headers must appear in the first row.
+- **Unique identifiers** — Each row must include a valid **email address** (or another unique field if enabled).
+- **Clean your data** —
+  - Remove stray or invisible characters.
+  - Fix unescaped quotation marks (`"NYC"` instead of `“NYC`).
+  - Check for misaligned headers.
+  - Remove duplicates, empty rows, and unnecessary columns.
+
+### How to Import Candidates
+
+You can import candidates from either the **Candidates page** or directly within a **study**.
+
+#### Option 1: Import to the Candidates Page
+
+1. **Navigate to the Candidates page** in the left-hand menu.
+2. Click **Add candidates**.
+   - If your database is empty, you'll see this option under _Build your research panel._
+   - If you already have candidates, it appears in the **top-right corner.**
+3. Select **Import from CSV.**
+4. Upload your file by **dragging and dropping** or using your file browser.
+5. Review and map fields under **Review import.**
+   - Great Question automatically matches your CSV columns to existing attributes.
+   - If a field doesn't exist, type a name and click **Save this as a new attribute.**
+   - Uncheck any columns you don't want to include.
+6. Adjust **Import settings:** <img src="https://files.helpdocs.io/ksa1uqyvhs/articles/d06iw22bmc/1762874717798/importcsv.png" />
+   - **Import name** – defaults to your file name (you can rename).
+   - **Candidate update process** - whether this import will or will not update candidate attributes.
+   - **Contact Access** – assign team access or unique identifiers.
+   - **Shortlist to a study (optional)** – automatically add these candidates to a published study.
+   - **Unique identifier** - using email is the default, but can be switched if necessary (reach out to Support for access)
+   - **Bulk attribute (optional)** – apply a label or tag to all imported candidates.
+7. Click **Review & import** to confirm the details in the slide-out panel.
+8. Click **Confirm & import.**
+
+![](https://files.helpdocs.io/ksa1uqyvhs/articles/d06iw22bmc/1762874747137/confrimimport.png)
+
+You'll see a confirmation message. Smaller imports process instantly; larger files (up to 10K rows) may take a few minutes. We recommend doing 10k at a time. You'll also receive an email when the import finishes.
+
+#### Option 2: Import Candidates Directly to a Study
+
+1. Open the **study** where you want to add candidates.
+2. Click **Add candidates** → select **Import from CSV.**
+3. Upload your file using drag-and-drop or the file browser.
+4. Map your fields as described above.
+5. Since you're importing from within a study, all candidates will be **shortlisted automatically** to that study (and added to your main database). If you're not seeing them in the shortlist, it's possible they already exist in the study under a different list—such as _Invited_, _Removed_, or another status.
+6. Review and confirm your import.
+
+Once complete, the candidates will appear in your **Participants tab** under _Shortlisted_ and will be available for recruiting or screening.
+
+### How to Troubleshoot Importing Candidates
+
+If something goes wrong during your import, review the common issues below to quickly identify and fix the problem.
+
+| **Issue** | **What's Happening** | **How to Fix It** |
+| --- | --- | --- |
+| **File upload failed** | The file isn't in `.csv` format or is open in another program. | Save your file as a `.csv`, close it in Excel or Sheets, and try uploading again. |
+| **Import is stuck or taking too long** | Large files (10,000\+ rows) can take extra time to process. | Split the file into smaller batches and re-upload. You'll receive an email confirmation once processing completes. |
+| **Columns aren't matching correctly** | CSV headers don't match existing attributes in Great Question. | Review field mapping and create new attributes during the _Review import_ step if needed. |
+| **Duplicate candidates skipped** | Import settings are set to skip duplicates. | Choose **Update existing candidates** during import to overwrite existing records instead. |
+| **Some rows didn't import** | Missing or invalid email addresses or unique identifiers. | Add valid emails or unique IDs to each row and re-upload. |
+| **Special characters appear incorrectly** | The CSV isn't encoded in UTF-8 format. | Re-export your file using UTF-8 encoding before importing. |
+| **New attributes not appearing** | The new field hasn't refreshed in the system. | Refresh your browser or check **Settings → Custom attributes → Candidate attributes** to confirm creation. |
+| **Candidates not appearing in study** | Candidates were imported to the database only (not shortlisted) or they already exist within the study. | If importing from the Candidates page, enable **Shortlist to a study** or import directly from the study. If you're not seeing them in the shortlist, it's possible they already exist in the study under a different list—such as _Invited_, _Removed_, or another status. |
+| **Incorrect data under attributes** | Columns were mismatched during mapping. | Re-import your file and review the mappings carefully before confirming. |
+| **Did not receive confirmation email** | Email notifications are disabled or filtered. | Check spam/junk folders or enable email notifications in your settings. |
+
+#### **Still need help?**
+
+Reach out to us anytime in the app or email us at [support@greatquestion.co](mailto:support@greatquestion.co)!
